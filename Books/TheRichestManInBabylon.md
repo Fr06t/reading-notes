@@ -3,6 +3,7 @@
 ### Table of Contents
 
 - [Introduction](#INTRODUCTION)
+- [The Laws that Govern the Building of Wealth](#The-Laws-that-Govern-the-Building-of-Wealth)
 
 ### Introduction
 
