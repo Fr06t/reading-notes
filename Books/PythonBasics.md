@@ -15,26 +15,18 @@
 - **Data type** refers to what *kind* of data a value represents. 	
 - A string is a data type, equivalent to text.
 - Fundamental data types are data types that can not be further *broken* down into smaller values of a different type. (SEE: Ch. 9)
-
 - Types often have an abbreviated name. String is abbreviated str, for example. You can figure this out by typing type(data) to figure out both the data type of a value or variable and its abbreviation.
-
 - Strings have three main properties:
 	- They contain characters, as in, they are made up of individual letters or symbols.
 	- Strings have a length, as in, the number of characters that make up the string.
 	- And these characters are ordered in a sequence to form the relevant text, as in, each character has a numbered position in the string.
-
 - Strings can be created by surrounding some text in quotation marks. They can be both single and double quotes. Thes quotes are called delimiters; they limit its beginning and end so that the computer can understand where it begins and ends.
-
 - A string written out and surrounded in double quotes in your code is called a string literal. This is different from, say, a user inputted string because that *is not* written explicitly in your code.
-
 - Because python reads first for one delimiter and ends the string when it encounters the next, you can not use double quotes inside a double quotes delimited string.
 	- e.g: Bad = print("Hello, "world"!"). Here, python thinks the string begins before 'H' and ends before 'w', Then, it reads 'world' and finds another string: "!". This leaves it with a non-variable word, world, which it can not interpret and the "!" which is not concatenated. Thus, it returns an error.
 	- Instead, you should use single quotes in double quotes delimited strings and vice versa. e.g: print("Hello, 'world'!") or print('Hello, "world"!')
-
 - For strings that you want to take up multiple lines, you can add \n to a given point within the string to force the rest of the text to print on a newline. You can also use """ or ''' delimiters and just type on a newline as if you were writing in a word processor. Triple codes are less commonly used than newlines for multiline strings. Their main application is actually as comments and code descriptions.
-
 - As mentioned above, the second property of strings is that they have a length of characters. This can be determined with the function len(value). Using 'abc' as a parameter, the function returns a 3. You can also use this on variables.
-
 - There are three basic operations that you can perform on a string: concatenation, indexing, and slicing.
 	- Two strings are combined, concatenated, with then + operator in much the same way as addition.
 	- Since strings are merely sequences of characters and are *indexed*, ordered, with numbers, you can access a character by giving its index. For example, if you wanted to know the 5th character in a string, you would do:
@@ -48,34 +40,25 @@
 		- ora = o[0:3] # Slicing
 		- Both return 'ora', but one is more efficient
 		- Note that slicing does index a bit differently. Instead of counting the first index number you ask it to (0, in our case) and ending with (3, in our case), it uses the two numbers as delimiiters and returns every string between them. You could view it as: string[start:end]
-
 - Finally, note that strings are immutable. Immutability means that they can not be *changed*. When you attempt to alter a character in a string (e.g: o[1] = 'a') it will return an error. You can, of course, just define it again (e.g: o = 'oaange') but this doesn't change the old string, **it creates an entirely new one with the same name**.
-
 - You can change a string's case with .lower() or .upper() method. 
-
 - You can remove whitespace with:
 	- .rstrip() removes all whitespace from the right of a string
 	- .lstrip() removes all whitespace from the left of a string
 	- .strip() removes whitespace from both sides of a string
-
 - Determine what characters a string starts with using the .startswith() method
-
 - You can take string input using the input() function
-
 - You can also assign input() to a variable after which the interpreter will immediately ask for an input from the user and assign it to the variable.
 	- e.g:
 		age = input()
 		print("How old are you? " + age)
-
 - Input() takes strings as inputs. You can not perform arithmetic operations on them. To convert an input() string into an integer, put the input within int() or float(). If the user inputs a floating point and you try to convert it using int(), it wil return a ValueError!
-
 - You can do the opposite using the str() function. In an f-string, they are automatically converted.
 	- e,g: str(age) # an example of str() function
 	- e.g: f"You are {age} years old." # an example of an f-string
-
 - You can find a string within a string, also known as a substring, using the .find() method on the main string and inserting the substring in the brackets. Find returns a -1 if it doesn't find the string. 
 
-#### Chapter 5
+### Chapter 5
 
 - Python has three numerical data types:
 	- Integers - positive or negative whole numbers
@@ -116,7 +99,7 @@
 	- the is_integer() method returns true if a floating point value is integral; has no actual decimal values
 	
 
-#### Chapter 6
+### Chapter 6
 
 - Functions are convenient for when you have a piece of code that you are going to reuse multiple times in a software. You can just place it in the function and call the function when necessary.
 
