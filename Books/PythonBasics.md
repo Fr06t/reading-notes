@@ -1,21 +1,16 @@
-### <u>BOOK HISTORY</u>
+# [Python Basics](https://www.goodreads.com/book/show/43448128-python-basics-dan-bader?ref=nav_sb_ss_4_13) by David Amoz
 
-Python Basics by David Amos, et. al is a programming guide book for the Python programming language. It is divided into 19 chapters and 117 sub-chapters.
+### Table of Contents
 
-### <u>BOOK SCHEDULE</u> 
+- [Chapter 4](#Chapter 4)
+- [Chapter 5](#Chapter 5)
+- [Chapter 6](#Chapter 6)
 
-At a rate of 1 chapter per day, on alternate days, I can finish this book 38 days after picking it up.
 
-### <u>SOME CRITERIA</u>	
-
-1. Python Basics is a practical programming guide book for the python programming language. It contains exercises, and is for the sore beginner.
-2. Python Basics is for the sore beginner. It contains many exercises and has pratical use applications as well. It is only a beginner book, howewver.
-
-### <u>SUMMARIZE</u>
 
 *Skipped the first three chapters for prior knowledge.*
 
-#### CHAPTER 4
+### Chapter 4
 
 - **Data type** refers to what *kind* of data a value represents. 	
 - A string is a data type, equivalent to text.
@@ -80,7 +75,7 @@ At a rate of 1 chapter per day, on alternate days, I can finish this book 38 day
 
 - You can find a string within a string, also known as a substring, using the .find() method on the main string and inserting the substring in the brackets. Find returns a -1 if it doesn't find the string. 
 
-#### CHAPTER 5
+#### Chapter 5
 
 - Python has three numerical data types:
 	- Integers - positive or negative whole numbers
@@ -121,7 +116,7 @@ At a rate of 1 chapter per day, on alternate days, I can finish this book 38 day
 	- the is_integer() method returns true if a floating point value is integral; has no actual decimal values
 	
 
-#### CHAPTER 6
+#### Chapter 6
 
 - Functions are convenient for when you have a piece of code that you are going to reuse multiple times in a software. You can just place it in the function and call the function when necessary.
 

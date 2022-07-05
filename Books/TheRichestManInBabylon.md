@@ -1,30 +1,24 @@
-### **<u>BOOK HISTORY</u>**
+# [The Richest Man in Babylon](https://www.goodreads.com/book/show/1052.The_Richest_Man_in_Babylon?ac=1&from_search=true&qid=xbYQ53V0JN&rank=1) *by George S. Clason*
 
-The Richest Man in Babylon was published in 1928 by American author George S. Clason. The book is about a Babylonian man, Arkad. He dispenses the  financial principles that helped him go from rags-to-riches. 
+### Table of Contents
 
-### <u>SOME CRITERIA</u>
+- [Introduction](#INTRODUCTION)
 
-1. The book is a practical guide on the basics of finance and financial principles. It is a blend of fiction and non-fiction
+### Introduction
 
-2. The book is intended for beginners.
+Observe the *'laws that govern the building of wealth'* and you will gain wealth. Be sure to spend wealth wisely as well-- excessive hoarding will leave you unsatisfied and miserable, at worst robbed. Unrestrained spending will exhaust your wealth, and if you do not have the self-control, drive you into debt.
 
-### <u>SUMMARIZE</u>
+### The Laws that Govern the Building of Wealth
 
-In Babylon once lived a very rich man named Arkad. He started of humble origins, but grew to outshine his friends, despite similar circumstances. Once, these friends came to visit Arkad and remarked to him at the disparity in wealth. 
+1. **A part of all you earn is yours to keep**. If you save one-tenth of your earnings for 10 years, you will have savings worth 1 year of your income.
 
-Arkad remonstrated them; according to him, they had not bothered to learn or observe the *'laws that govern the building of wealth'*. He says to them that gaining wealth merely makes you inclined to spending; when you run out of money, you will either have to lose the habit or bankrupt yourself into misery.
+2. **Make your money work for you.** Those savings are not to be spent lavishly at a later date, not even to be saved for some emergency, but to earn *more money*. If you invest them such that they are 2x their worth by the time those 10 years pass, you will have 2 years worth of income.  
 
-He also remembers that there are those that hoard their wealth; they fear spending it, until all is lost by robbery or they die without experiencing what they could've. 
+3. **Consult the experts.** Do not get scammed. Consult those you know, who know. Only then invest. Do not take the advice of a brick-maker on jewels, nor the advice of a farmer on stars; leave that to the astrologer.
 
-Arkad then breaks into a recollection. He recalls that he was in similar circumstance to his friends: no money to inherit, no superior skills to market. He did have one thing, determination. He set to work as a scribe with penance to show for it until, one day, a money lender ordered him to quickly copy the 'Ninth Law' and have it to him in two days. He failed, but  he asked for just one more day, and in exchange the money-lender would have to give him advice on how to gain wealth.
+4. 
 
-1. The money-lender told him that, of all he earned, he should store a **part of it**. It should not be less than a tenth of what he earned.
-
-Arkad was scammed of his savings 12 months after he began following the advice, by a brick-maker who claimed to be knowledgeable of gold. He began saving once more, only to end up wasting away the money. The money-lender remonstrated him
-
-2. Not only should he save a portion of his earnings, he should not use these savings but for productive purposes.
-
-The money-lender, growing old and unsatisfied with his sons money-handling, decided now was a good time to hand Arkad his holdings, as he judged him a matured man.
+   
 
 
 
