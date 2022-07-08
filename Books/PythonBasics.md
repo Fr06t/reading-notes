@@ -2,9 +2,20 @@
 
 ### Table of Contents
 
+- [Table of Contents](#Table-of-Contents)
+
 - [Chapter 4](#Chapter-4)
 - [Chapter 5](#Chapter-5)
 - [Chapter 6](#Chapter-6)
+- [Logic and Control Flow](#Logic-and-Control-Flow)
+  - [The Basics](#The-basics)
+  - [Some Other Keywords](#Some-Other-Keywords)
+  - [Flow Control](#Flow-Control)
+  - [Error Handling](#Error-Handling)
+
+- [Tuples, Lists, and Dictionaries](#Tuples-Lists-and-Dictionaries)
+  - [Tuples](#Tuples)
+
 
 
 
@@ -113,19 +124,19 @@
 	  del len
 	  ```
 	
-- Just running `len` won't work in a program. For functions, you have to put brackets at the end like `len()`. Inside those brackets will go parameters, or aguments. `len()` takes values or variables, but some functions don't take anything. Regardless, they must be run with those brackets, but this time empty.
+- Just running len won't work in a program. For functions, you have to put brackets at the end like len(). Inside those brackets will go parameters, or aguments. len() takes values or variables, but some functions don't take anything. Regardless, they must be run with those brackets, but this time empty.
 
-- Once `len(apple)` is 'called', the function is executed with the argument `apple`. Finally, the result is 'returned' as the return value: `5`. Thus, one cycle of the function is completed. 
+- Once len(apple) is 'called', the function is executed with the argument apple. Finally, the result is 'returned' as the return value: 5. Thus, one cycle of the function is completed. 
 
 - To create a function, you must give it a function signature:	
-	+ `def name(parameters):`
-		* where `def` is used to clarify that you're defining a function (a keyword), name is the name you will use to call on the function later, and  parameters are the values it needs.
+	+ def name(parameters):
+		* where def is used to clarify that you're defining a function (a keyword), name is the name you will use to call on the function later, and  parameters are the values it needs.
 	
 - And then a body:
-	`product = parameters + parameters`
+	product = parameters + parameters
 	
 - And finally, the value to return:
-	+ `return product`
+	+ return product
 	
 - Making up:
 
@@ -137,9 +148,9 @@
 
 - Note the indentations: if a line of code is indented after the declaration of a function, it automatically comes under the function. This is especially important in Python since there are no delimiters (e.g: {}) for functions. 
 
-- Python is generally picky about indents. Make sure all of them are either spaced *or* tabbed, not both, and contain the same number of spaces/tabs. A good number is generally 4.
+- Python is generally picky about indents. Make sure all of them are either spaced or tabbed, not both, and contain the same number of spaces/tabs. A good number is generally 4.
 
-- Calling this function is the same as calling any other function, like `print() `
+- Calling this function is the same as calling any other function, like print()
 
   ```python
   name(5)
@@ -169,7 +180,7 @@
 
 - Here, calling the function would automatically print. You don't need to assign it to a variable or manually print. 
 
-- If someone calls `help(name)` on a function, it generally returns a *docstring* of what the function does. User added functions don't contain these unless you manually add them:
+- If someone calls help(name) on a function, it generally returns a docstring of what the function does. User added functions don't contain these unless you manually add them:
 
   ```python
   def farewell(name):
@@ -202,3 +213,143 @@
 - If you want to limit the number of loops in a for loop with basic, simple numbers, you can use the range() function. range(1, 4) means the program will run four times, starting with the first number and ending with the second. You can also just leave a number like in range(2) and it will count from 1 till that number.
 
 - If you wish, you can also put loops within loops, a phenomenon called nested loops. 
+
+Skipped chapter seven for prior knowledge.
+
+### Logic and Control Flow
+
+#### The Basics
+
+While in loops, the loop body continues repeating so long as the condition is *not satisfied*. In a conditional, the body only executes once, and executes only if the condition is satisfied; as in, it returns `true`.
+
+Logic is a complex topic, but in computer programming it takes the simple format of comparing one value with another. 
+
+```python
+if (1 > 0):
+    do stuff
+```
+
+is the essence of a conditional. 'if' is the keyword, everything within the round brackets will be the condition, the statement, that must be satisfied, and everything after the colon (and indented) will be the body of code executed if the condition is true.
+
+There are a number of operators for logic statements in the python language. Ones you learned in school, like > (greater than), < (lesser than), and == (equals to). The equals to has two equals signs together; otherwise, the interpreter would confuse it for the assignment variable, a single =. There are also 'booleans', basically `True` and `False`. When you write the `1 > 0` statement a boolean, in this case `True` (because the statement is true), is returned. 
+
+#### Some Other Keywords
+
+Mathematical operators isn't the only way to express conditionals, though it is most common. There are special keywords too.
+
+```python
+if (1 > 0 and 2 > 1):
+	print("1 is greater than 0, and 2 is greater than 1!")
+```
+
+The first is the `and` keyword. It is used when you need *two or more* conditions to ***all be true***. If all conditions, in this case `1 > 0` and `2 > 1`, are not true, then the condition returns `False` and the body of code does not execute. 
+
+```python
+if (1 > 0 or 2 > 1):
+	print("1 is greater than 0, or 2 is greater than 0.")
+```
+
+The second is the `or` keyword. Here, only *one* of the however many conditions needs to return `True`. If one of them does, then the body of code will execute. 
+
+```python
+if (not 1 > 0):
+	print("1 is not greater than 0.")
+```
+
+The `not` keyword basically reverses the boolean value of the condition. If `1 > 0` would normally return `True`, putting a `not` in front of it would make it `False`.
+
+#### Flow Control
+
+The `if` statement is just one of a couple of 'flow control' functions used in Python. Its format has already been outlined, but basically:
+
+```python
+if (a > b):
+    do something
+```
+
+Of course, there could be a number of things other than a simple greater than statement in the brackets.
+
+There is also the `else` keyword. Basically, if the main `if` condition  returns false, then the block of code under the `else` keyword is executed.
+
+```python
+if (a > b):
+	do something
+else: 
+	do something else
+```
+
+If you wanted to add more conditions, then you could use the `elif` keyword.
+
+```python
+if (a > b):
+	do something
+elif (a == b):
+	do something different
+else:
+	do something else
+```
+
+There can be as many `elifs` in an if statement as you wish. Note, however, that `elif` and `else` can not be used independently. They need to be used after an `if` statement, in the order `if>elif>else`. 
+
+You can also nest if statements like you can while loops. 
+
+#### Error Handling
+
+In some programs, there are certain variables not in your hands like input. If a user were to input a string, for example, instead of a number, and you were to use a mathematical operator on it, the program would crash. In such cases, you can use error handling; instead of letting the error crash your program, you can pass it to the user in the form of text and ask for another input. 
+
+```python
+try:
+	number = int(input("Enter a number: "))
+except ValueError:
+	print("That's not an integer!")
+```
+
+Here, the try block is executed first, and if it returns the specified error (in this case a `ValueError`), then the except is executed. If you wanted it to ask for input again, then you could use a while loop.
+
+```python
+while 1:
+	try:
+		number = int(input("Enter a number: "))
+	except ValueError:
+		print("That's not an integer!")
+        continue
+	break
+```
+
+Here, the continue forces the program into its next iteration; otherwise, it would read the break, which would close the loop.
+
+### Tuples, Lists, and Dictionaries
+
+A **data structure** is a collection of data. They take many forms, but in basic Python, the main types are:
+
+#### Tuples
+
+To define a tuple, we must define a sequence. A sequence is merely an ordered (or indexed) list of data; each specific 'data' is called an item of the sequence. Each item is assigned a number—an index—that denotes its position in the sequence. 
+
+Strings are a type of sequence, as discussed in [Chapter 4](#Chapter-4). 
+
+Now, a 'tuple', in mathematics, is a finite, ordered sequence of values. To denote a tuple, you use the format:
+
+```python
+example_tuple = (a, b, c, ...)
+```
+
+Here, a, b, and c, are all of the same data type. The distinguishing features of a tuple are the rounded brackets that delimit it, and the commas that separate each item. `example_tuple` is merely the variable the tuple is assigned to. 
+
+To convert another data type into a tuple (like with `int()` or `str()`), use the `tuple()` function. 
+
+```python
+tuple("Python")
+```
+
+Tuples share many attributes with strings. They are immutable, can be indexed or sliced, have a len(), and are iterable using the for loop. 
+
+You can also 'unpack' tuples onto variables:
+
+```python
+coordinates = (4.21, -0.75)
+x, y = coordinates
+```
+
+Here, a tuple with two coordinates, an x and y position, is created. Then, its two values are assigned to the x and y variables. They are assigned to the variables in the order they are assigned (x first, y second).
+

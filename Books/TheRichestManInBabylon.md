@@ -18,3 +18,20 @@ Observe the *'laws that govern the building of wealth'* and you will gain wealth
 5. **Make of thy dwelling a profitable investment.** Own your house; it will provide you comfort and freedom. If you already rent a home, take a loan and buy one. You will merely substitute the landlord for the moneylender, and the moneylender is impermanent; your loan will not take more than a few years to pay off, principal and interest. 
 5. **Insure a future income**. Secure a sizable saving so that you do not have to work at an old age.
 5. **Increase thy ability to earn.** Skill yourself. Thus, you will earn more, save more, invest more, and spend more. Work hard too, which is another prerequisite for earning more.
+
+### The Five Laws of Gold
+
+1. **Gold cometh gladly and in increasing quantity to any man who will put by not less than one-tenth of his earnings to create an estate for his future and that of his family.** 
+   - Like the 1st cure, this law recommends you to save 1/10th of your income 'to create an estate'.
+
+2. **Gold laboreth diligently and contentedly for the wise owner who finds for it profitable employment, multiplying even as the flocks of the field.**
+   - If you utilize your gold wisely, you can multiply it through investments and other means.
+
+3. **Gold clingeth to the protection of the cautious owner who invests it under the advice of men wise in its handling.**
+   - When expending your money for profitable purposes, take the advice of men trustworthy and wise in these businesses.
+
+4. **Gold slippeth away from the man who invests it in businesses or purposes with which he is not familiar or which are not approved by those skilled in its keep.** 
+   - Otherwise, you will lose it all. 
+
+5. **Gold flees the man who would force it to impossible earnings or who followeth the alluring advice of tricksters and schemers or who trusts it to his own inexperience and romantic desires in investment.**
+   - Also take care not to be scammed. If it's too good to be true, then it is.
