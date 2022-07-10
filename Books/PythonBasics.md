@@ -15,7 +15,10 @@
 
 - [Tuples, Lists, and Dictionaries](#Tuples-Lists-and-Dictionaries)
   - [Tuples](#Tuples)
-
+  - [Lists](#Lists)
+  - [Extras](#Extras)
+  - [Dictionaries](#Dictionaries)
+  - [When To Use Each](#When-To-Use-Each)
 
 
 
@@ -352,4 +355,131 @@ x, y = coordinates
 ```
 
 Here, a tuple with two coordinates, an x and y position, is created. Then, its two values are assigned to the x and y variables. They are assigned to the variables in the order they are assigned (x first, y second).
+
+#### Lists
+
+Lists are another type of sequence data structure. Lists are also indexed, like tuples. The feature that distinguishes them from tuples and strings, however, is that they are **mutable.** Meaning, you can change a specific item in a list without having to replace the entire list.
+
+```python
+coordinates = [4.21, -0.75]
+# or
+list(4.21, -0.75)
+```
+
+The only distinguishing feature of a list definition is the fact that it is delimited by square brackets, unlike the round brackets of a tuple. They cam contain all python data types too.
+
+Methods to utilize a lists' mutability:
+
+```python
+coordinates = ["up, down, left, right"]
+
+coordinates = coordinates.split(",") # Split string into separate item wherever there is a comma
+
+print(coordinates[1]) # Prints the 1 character in list (down)
+print(coordinates[0:2]) # Splices characters 0:2 (up, down) and prints them
+"left" in coordinates # checks if 'left' is in coordinates list (True)
+for coordinate in coordinates: # for each coordinate in the list
+    print(coordinate) # print coordinate
+    # Basically iterates the list and prints every coordinate/item
+coordinates[1] = 'up' # change the 1 item (down) in list to 'up'
+coordinates[0:1] = ['up', 'down'] # Splices it back to normal
+coordinates.insert(1, 'upright') # Inserts string 'upright' into index '1' in list 'coordinates' (doesn't replace 'down', just pushes it one index up)
+coordinates.pop(1) # takes the value in index 1 ('upright') and removes it from the list
+coordinates.extend("upright") # adds an item at the end of a list
+
+sum([1, 2, 3, 4, 5]) # sum() is a simple function to sum all the contents of a sequence or variables
+
+# Lists can also be created through mathematical formulas (this is called list comprehension)
+numbers = [1, 2, 3, 4, 5]
+cubes = [num**3 for num in numbers] # for each num in number, exponentiate (cube) it by three and make that an item in the list 'cubes'
+# A list comprehension is formatted:
+[do x for y in a]
+```
+
+#### Extras
+
+You can also nest data structures:
+
+```python
+list = [[1, 2], [3, 4]]
+```
+
+Here, you would index or access each individual list with two indexes:
+
+```python
+list[1][2] # returns 2nd item in the first list
+```
+
+There are also special methods for copying lists. If you simply assigned one to another:
+
+```python
+fruits = ['banana', 'apple', 'mango']
+foods = fruits
+foods.insert("biryani")
+```
+
+and attempted to modify the new one, it would also modify the old list it was a copy of. Thus:
+
+```python
+fruits = ['banana', 'apple', 'mango', 'biryani']
+# AND
+foods = ['banana', 'apple', 'mango', 'biryani']
+```
+
+Sort of like a symlink.
+
+Instead:
+
+```python
+foods = fruits[:]
+```
+
+works better. This slices all of the contents of the fruits list and *then* creates a foods list with them. You could also
+
+```python
+foods = fruits[0:]
+```
+
+Finally, you can sort lists with the `.sort()` method.
+
+```python
+foods.sort() # sorts foods in ascending order
+```
+
+You can specify *how* you want the list to be sorted by adding an optional parameter. This parameter must be a function, and the return values of the function will be used to sort the list in ascending order.
+
+```python
+foods.sort(key=len) # sorts the list according to the length of each item in ascending order
+```
+
+#### Dictionaries
+
+Dictionaries are a data structure in Python, like tuples and lists. But they store information in pairs; **key-value pairs**, to be more specific. Each  item, also known as an object, in a dictionary has to parts: the key, and the value.
+
+Compared to a layman dictionary, each key would be a word and the value would be its definition.
+
+```python
+foods = {
+"Fruits": "Apple",
+"Vegetables": "Celery",
+"Savory": "Biryani",
+}
+
+foods["Fruits"] # Accesses each value under the "fruits" key
+foods["Sweet"] = "Cake" # Dictionaries are mutable. This adds a value "Cake" under a new key "Sweet"
+
+for food in foods:
+    print(key + " " + foods[food])
+    # To get a value when iterating over a dictionary, you need to specify the value as an index in the original dictionary name.
+```
+
+#### When To Use Each
+
+Use a:
+
+1. List - when you need order, mutability, and need the data to be iterated.
+2. Tuple - when you need order, do **not** need mutability, and need the data to be iterated.
+3. Dictionary - when you do not need order, need mutability, and plan to look up values; not iterate.
+
+Basically, what distinguishes lists and tuples is mutability, while dictionaries are a whole data structure in their own.
 
