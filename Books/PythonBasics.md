@@ -2,7 +2,27 @@
 
 ### Table of Contents
 
-[TOC]
+- [Python Basics](#Python-Basics)
+    + [Table of Contents](#table-of-contents)
+    + [Chapters 1-4](#chapters-1-4)
+    + [Strings](#strings)
+    + [Chapter 5](#chapter-5)
+    + [Chapter 6](#chapter-6)
+    + [Logic and Control Flow](#logic-and-control-flow)
+      - [The Basics](#the-basics)
+      - [Some Other Keywords](#some-other-keywords)
+      - [Flow Control](#flow-control)
+      - [Error Handling](#error-handling)
+    + [Tuples, Lists, and Dictionaries](#tuples--lists--and-dictionaries)
+      - [Tuples](#tuples)
+      - [Lists](#lists)
+      - [Extras](#extras)
+      - [Dictionaries](#dictionaries)
+      - [When To Use Each](#when-to-use-each)
+    + [Object-Oriented Programming (OOP)](#object-oriented-programming--oop-)
+      - [Classes](#classes)
+
+### Chapters 1-4
 
 *Skipped the first three chapters for prior knowledge.*
 

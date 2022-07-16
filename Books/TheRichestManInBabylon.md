@@ -2,7 +2,12 @@
 
 ### Table of Contents
 
-[TOC]
+- [The Richest Man in Babylon](#the-richest-man-in-babylon)
+    + [Table of Contents](#table-of-contents)
+    + [Introduction](#introduction)
+    + [Seven Cures for a Lean Purse](#seven-cures-for-a-lean-purse)
+    + [The Five Laws of Gold](#the-five-laws-of-gold)
+    + [Extra Advice](#extra-advice)
 
 ### Introduction
 
@@ -31,7 +36,7 @@ Observe the *'laws that govern the building of wealth'* and you will gain wealth
 5. **Gold flees the man who would force it to impossible earnings or who followeth the alluring advice of tricksters and schemers or who trusts it to his own inexperience and romantic desires in investment.**
    - Also take care not to be scammed. If it's too good to be true, then it is.
 
-#### Extra Advice
+### Extra Advice
 
 - *Better a little caution than a great regret.*
 - *Do not afford to be without adequate protection of all forms, physical, mental, and others.*
