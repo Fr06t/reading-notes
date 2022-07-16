@@ -2,75 +2,76 @@
 
 ### Table of Contents
 
-- [Table of Contents](#Table-of-Contents)
-
-- [Chapter 4](#Chapter-4)
-- [Chapter 5](#Chapter-5)
-- [Chapter 6](#Chapter-6)
-- [Logic and Control Flow](#Logic-and-Control-Flow)
-  - [The Basics](#The-basics)
-  - [Some Other Keywords](#Some-Other-Keywords)
-  - [Flow Control](#Flow-Control)
-  - [Error Handling](#Error-Handling)
-
-- [Tuples, Lists, and Dictionaries](#Tuples-Lists-and-Dictionaries)
-  - [Tuples](#Tuples)
-  - [Lists](#Lists)
-  - [Extras](#Extras)
-  - [Dictionaries](#Dictionaries)
-  - [When To Use Each](#When-To-Use-Each)
-
-
+[TOC]
 
 *Skipped the first three chapters for prior knowledge.*
 
-### Chapter 4
+### Strings
 
-- **Data type** refers to what *kind* of data a value represents. 	
-- A string is a data type, equivalent to text.
-- Fundamental data types are data types that can not be further *broken* down into smaller values of a different type. (SEE: Ch. 9)
-- Types often have an abbreviated name. String is abbreviated str, for example. You can figure this out by typing type(data) to figure out both the data type of a value or variable and its abbreviation.
-- Strings have three main properties:
-	- They contain characters, as in, they are made up of individual letters or symbols.
-	- Strings have a length, as in, the number of characters that make up the string.
-	- And these characters are ordered in a sequence to form the relevant text, as in, each character has a numbered position in the string.
-- Strings can be created by surrounding some text in quotation marks. They can be both single and double quotes. Thes quotes are called delimiters; they limit its beginning and end so that the computer can understand where it begins and ends.
-- A string written out and surrounded in double quotes in your code is called a string literal. This is different from, say, a user inputted string because that *is not* written explicitly in your code.
-- Because python reads first for one delimiter and ends the string when it encounters the next, you can not use double quotes inside a double quotes delimited string.
-	- e.g: Bad = print("Hello, "world"!"). Here, python thinks the string begins before 'H' and ends before 'w', Then, it reads 'world' and finds another string: "!". This leaves it with a non-variable word, world, which it can not interpret and the "!" which is not concatenated. Thus, it returns an error.
-	- Instead, you should use single quotes in double quotes delimited strings and vice versa. e.g: print("Hello, 'world'!") or print('Hello, "world"!')
-- For strings that you want to take up multiple lines, you can add \n to a given point within the string to force the rest of the text to print on a newline. You can also use """ or ''' delimiters and just type on a newline as if you were writing in a word processor. Triple codes are less commonly used than newlines for multiline strings. Their main application is actually as comments and code descriptions.
-- As mentioned above, the second property of strings is that they have a length of characters. This can be determined with the function len(value). Using 'abc' as a parameter, the function returns a 3. You can also use this on variables.
-- There are three basic operations that you can perform on a string: concatenation, indexing, and slicing.
-	- Two strings are combined, concatenated, with then + operator in much the same way as addition.
-	- Since strings are merely sequences of characters and are *indexed*, ordered, with numbers, you can access a character by giving its index. For example, if you wanted to know the 5th character in a string, you would do:
-		- o = "orange"
-		  o[4] # Python is offset by -1 and starts counting at zero so 4 is actually the fifth letter if you count from one
-		- The result would be 'g'
-		- If you wanted to count from left-to-right, as opposed to right-to-left, you would use negative numbers.
-		- o[-1] would be e, and o[-2] would be g, etc
-	- If you wanted to index multiple characters at once, you could use normal indexing or slicing
-		- ora = o[0] + o[1] + o[2] # Normal indexing
-		- ora = o[0:3] # Slicing
-		- Both return 'ora', but one is more efficient
-		- Note that slicing does index a bit differently. Instead of counting the first index number you ask it to (0, in our case) and ending with (3, in our case), it uses the two numbers as delimiiters and returns every string between them. You could view it as: string[start:end]
-- Finally, note that strings are immutable. Immutability means that they can not be *changed*. When you attempt to alter a character in a string (e.g: o[1] = 'a') it will return an error. You can, of course, just define it again (e.g: o = 'oaange') but this doesn't change the old string, **it creates an entirely new one with the same name**.
-- You can change a string's case with .lower() or .upper() method. 
-- You can remove whitespace with:
-	- .rstrip() removes all whitespace from the right of a string
-	- .lstrip() removes all whitespace from the left of a string
-	- .strip() removes whitespace from both sides of a string
-- Determine what characters a string starts with using the .startswith() method
-- You can take string input using the input() function
-- You can also assign input() to a variable after which the interpreter will immediately ask for an input from the user and assign it to the variable.
-	- e.g:
-		age = input()
-		print("How old are you? " + age)
-- Input() takes strings as inputs. You can not perform arithmetic operations on them. To convert an input() string into an integer, put the input within int() or float(). If the user inputs a floating point and you try to convert it using int(), it wil return a ValueError!
-- You can do the opposite using the str() function. In an f-string, they are automatically converted.
-	- e,g: str(age) # an example of str() function
-	- e.g: f"You are {age} years old." # an example of an f-string
-- You can find a string within a string, also known as a substring, using the .find() method on the main string and inserting the substring in the brackets. Find returns a -1 if it doesn't find the string. 
+**Data type** refers to what *kind* of data a value represents. A **string** (abbr. `str`) is a data type, equivalent to text. There are also fundamental data types—data types that can not be further broken down into smaller values of a different type. An example of a non-fundamental data type would also be a string: a string is a sequence of *characters*, and thus can be broken down into characters. 
+
+Strings have three main properties:
+
+1. They contain characters, as in, they are made up of individual letters or symbols.
+2. Strings have a length, as in, the number of characters that make up the string.
+3. And these characters are ordered in a sequence to form the relevant text, as in, each character has a numbered position in the string.
+
+Strings can be created by surrounding some text in quotation marks. They can be both single and double quotes. Thes quotes are called delimiters; they limit its beginning and end so that the computer can understand where it begins and ends.
+
+A string written out and surrounded in double quotes in your code is called a string literal. This is different from, say, a user inputted string because that *is not* written explicitly in your code.
+
+Because python reads first for one delimiter and ends the string when it encounters the next, you can not use double quotes inside a double quotes delimited string.
+
+e.g: Bad = print("Hello, "world"!"). Here, python thinks the string begins before 'H' and ends before 'w', Then, it reads 'world' and finds another string: "!". This leaves it with a non-variable word, world, which it can not interpret and the "!" which is not concatenated. Thus, it returns an error.
+
+Instead, you should use single quotes in double quotes delimited strings and vice versa. e.g: print("Hello, 'world'!") or print('Hello, "world"!')
+
+For strings that you want to take up multiple lines, you can add \n to a given point within the string to force the rest of the text to print on a newline. You can also use """ or ''' delimiters and just type on a newline as if you were writing in a word processor. Triple codes are less commonly used than newlines for multiline strings. Their main application is actually as comments and code descriptions.
+
+As mentioned above, the second property of strings is that they have a length of characters. This can be determined with the function len(value). Using 'abc' as a parameter, the function returns a 3. You can also use this on variables.
+
+There are three basic operations that you can perform on a string: concatenation, indexing, and slicing.
+
+Two strings are combined, concatenated, with then + operator in much the same way as addition.
+
+Since strings are merely sequences of characters and are *indexed*, ordered, with numbers, you can access a character by giving its index. For example, if you wanted to know the 5th character in a string, you would do:
+- o = "orange"
+  o[4] # Python is offset by -1 and starts counting at zero so 4 is actually the fifth letter if you count from one
+- The result would be 'g'
+- If you wanted to count from left-to-right, as opposed to right-to-left, you would use negative numbers.
+- o[-1] would be e, and o[-2] would be g, etc
+
+If you wanted to index multiple characters at once, you could use normal indexing or slicing
+- ora = o[0] + o[1] + o[2] # Normal indexing
+- ora = o[0:3] # Slicing
+- Both return 'ora', but one is more efficient
+- Note that slicing does index a bit differently. Instead of counting the first index number you ask it to (0, in our case) and ending with (3, in our case), it uses the two numbers as delimiiters and returns every string between them. You could view it as: string[start:end]
+
+Finally, note that strings are immutable. Immutability means that they can not be *changed*. When you attempt to alter a character in a string (e.g: o[1] = 'a') it will return an error. You can, of course, just define it again (e.g: o = 'oaange') but this doesn't change the old string, **it creates an entirely new one with the same name**.
+
+You can change a string's case with .lower() or .upper() method. 
+
+You can remove whitespace with:
+- .rstrip() removes all whitespace from the right of a string
+- .lstrip() removes all whitespace from the left of a string
+- .strip() removes whitespace from both sides of a string
+
+Determine what characters a string starts with using the .startswith() method
+
+You can take string input using the input() function
+
+You can also assign input() to a variable after which the interpreter will immediately ask for an input from the user and assign it to the variable.
+- e.g:
+	age = input()
+	print("How old are you? " + age)
+
+Input() takes strings as inputs. You can not perform arithmetic operations on them. To convert an input() string into an integer, put the input within int() or float(). If the user inputs a floating point and you try to convert it using int(), it wil return a ValueError!
+
+You can do the opposite using the str() function. In an f-string, they are automatically converted.
+- e,g: str(age) # an example of str() function
+- e.g: f"You are {age} years old." # an example of an f-string
+
+You can find a string within a string, also known as a substring, using the .find() method on the main string and inserting the substring in the brackets. Find returns a -1 if it doesn't find the string. 
 
 ### Chapter 5
 
@@ -483,3 +484,44 @@ Use a:
 
 Basically, what distinguishes lists and tuples is mutability, while dictionaries are a whole data structure in their own.
 
+### Object-Oriented Programming (OOP)
+
+OOP is a method for structuring a program. In OOP, you have data and through 'objects', groups of similar methods and behaviors, you 'process' this data. 
+
+#### Classes
+
+Classes can be used to create custom data structures. Like with strings, you can also add methods to your classes that operate on the data that uses your structure. Classes, like functions, usually do not operate on *literals*. You are are instead supposed to define an 'instance' of that class later on when needed, and operate on any data with that. 
+
+```python
+class Worker: # class is the 'keyword', while Worker is the name of the class (you choose)
+    # Everything after this is the body of the class:
+    nationality = "Pakistani" # This is a class attribute; it is a value that all instances of a class will always share. As opposed to an instance attribute, which is different between each instance.
+    def __init__(self, name, age, field): 
+        """This 'instance method' (function of a class) is run everytime an instance of the Worker class is created (because of the keyword __init__).
+    	The first parameter is what the function will use to refer to its own class. While an instance would simply use Worker.name, you have to refer to it as self.name here because Worker is not yet defined in this function--it is basically a placeholder.
+        The next parameters are the 'instance attributes'. These are basically values that every Worker class contains; since __init__ is automatically run, you do not need to manually define these every time you want to create a Worker; you simply enter it as you would a parameter in a function when initially creating the instance""" 
+        self.name = name # assigns the value of the parameter 'name' to the instance attribute self.name
+        self.age = age # age of worker
+        self.field = field # field of employment of worker
+	
+    def __str__(self): # Whatever this instance (keyword __str__) returns is outputted when an instance is print()-ed.
+        return self.name+" is "+self.age+" years old." # It merely returns a formatted string
+    
+    def speak(self, speech): # This instance method takes a parameter 'speech'
+        return self.name + " says " + self.speech + "." # It also returns a formatted string
+        
+# You can now create an instance of the Worker class
+Raza = Worker("Raza", 24, "Chef") # Assigning an instance to a variable is the only way to keep it in memory
+
+Danish = Worker("Danish", 18, "Fast Food")
+
+print(Raza.field) # Note that, after assigning an instance to a variable, you interact with that instance using the variable name (here Raza). This is because every new Worker instance would override the previous if they all had the same name. 
+
+print(Raza.nationality == Danish.nationality) # class attributes are referred to in the same way as instance attributes
+
+Danish.nationality = "Indian" # Class attributes can be changed too
+
+print(Danish.speak("Hello!")) # Instance methods are called like functions
+
+print(Raza) # returns the value that Raza.__str__() returns 
+```

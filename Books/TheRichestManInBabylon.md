@@ -2,10 +2,7 @@
 
 ### Table of Contents
 
-- [Introduction](#INTRODUCTION)
-- [Seven Cures for a Lean Purse](#Seven-Cures-for-a-Lean-Purse)
-- [The Five Laws of Gold](#The-Five-Laws-of-Gold)
-- [Extra Advice](#Extra-Advice) 
+[TOC]
 
 ### Introduction
 
