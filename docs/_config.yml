@@ -24,26 +24,3 @@ color_scheme: custom
 aux_links:
   "Reading Notes on GitHub":
     - "https://github.com/fr06t/reading-notes"
-
-
-defaults:
-  - scope:
-      path: "articles"
-    values:
-      parent: Articles
-      nav_exclude: true
-  - scope:
-      path: "books"
-    values:
-      parent: Books
-      nav_exclude: true
-  - scope:
-      path: "talks"
-    values:
-      parent: Talks
-      nav_exclude: true
-  - scope:
-      path: "papers"
-    values:
-      parent: Papers
-      nav_exclude: true
