@@ -22,3 +22,15 @@ titles_from_headings:
 aux_links:
   "Reading Notes on GitHub":
     - "https://github.com/fr06t/reading-notes"
+
+defaults:
+  - scope:
+      path: "Articles"
+    values:
+      parent: Articles
+      nav_exclude: true
+  - scope:
+      path: "Books"
+    values:
+      parent: Books
+      nav_exclude: true
