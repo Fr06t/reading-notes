@@ -1,1 +1,26 @@
+title: Reading Notes
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
 remote_theme: just-the-docs/just-the-docs
+
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: false
+
+color_scheme: custom
+
+aux_links:
+  "Reading Notes on GitHub":
+    - "https://github.com/fr06t/reading-notes"
