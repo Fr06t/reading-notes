@@ -19,8 +19,6 @@ titles_from_headings:
   strip_title: false
   collections: false
 
-color_scheme: custom
-
 aux_links:
   "Reading Notes on GitHub":
     - "https://github.com/fr06t/reading-notes"
