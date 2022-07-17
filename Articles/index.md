@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Books
+title: Articles
 nav_order: 2
 has_children: true
 ---
 
-# Books
-
+# Articles
