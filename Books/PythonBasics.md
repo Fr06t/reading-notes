@@ -6,21 +6,26 @@
     + [Table of Contents](#table-of-contents)
     + [Chapters 1-4](#chapters-1-4)
     + [Strings](#strings)
-    + [Chapter 5](#chapter-5)
-    + [Chapter 6](#chapter-6)
+    + [Numbers](#Numbers)
+    + [Functions and Loops](#Functions-and-Loops)
     + [Logic and Control Flow](#logic-and-control-flow)
       - [The Basics](#the-basics)
       - [Some Other Keywords](#some-other-keywords)
       - [Flow Control](#flow-control)
       - [Error Handling](#error-handling)
-    + [Tuples, Lists, and Dictionaries](#tuples--lists--and-dictionaries)
+    + [Tuples, Lists, and Dictionaries](#tuples-lists-and-dictionaries)
       - [Tuples](#tuples)
       - [Lists](#lists)
       - [Extras](#extras)
       - [Dictionaries](#dictionaries)
       - [When To Use Each](#when-to-use-each)
-    + [Object-Oriented Programming (OOP)](#object-oriented-programming--oop-)
+    + [Object-Oriented Programming (OOP)](#object-oriented-programming-(oop))
       - [Classes](#classes)
+      - [Inheritance](#Inheritance)
+    + [Modules](#Modules)
+      + [Namespaces](#Namespaces)
+      + [Name Variation](#Name-Variation)
+      + [Packages](#Packages)
 
 ### Chapters 1-4
 
@@ -93,7 +98,7 @@ You can do the opposite using the str() function. In an f-string, they are autom
 
 You can find a string within a string, also known as a substring, using the .find() method on the main string and inserting the substring in the brackets. Find returns a -1 if it doesn't find the string. 
 
-### Chapter 5
+### Numbers
 
 - Python has three numerical data types:
 	- Integers - positive or negative whole numbers
@@ -134,7 +139,7 @@ You can find a string within a string, also known as a substring, using the .fin
 	- the is_integer() method returns true if a floating point value is integral; has no actual decimal values
 	
 
-### Chapter 6
+### Functions and Loops
 
 - Functions are convenient for when you have a piece of code that you are going to reuse multiple times in a software. You can just place it in the function and call the function when necessary.
 
@@ -545,3 +550,118 @@ print(Danish.speak("Hello!")) # Instance methods are called like functions
 
 print(Raza) # returns the value that Raza.__str__() returns 
 ```
+
+#### Inheritance
+
+Class inheritance is when a class 'inherits' the attributes of another class. The class doing the inheriting is called a 'child class' while the class it is inheriting is called the 'parent class'. Child classes can have their own attributes, replace or override the attributes of their parent class, among other things; they basically function like normal classes, except for the fact that they have the attributes off another class at their initialization. Parent classes can be seen as a genus, while child classes can be considered species.
+
+```python
+class Chef(Worker):
+    self.field = "Chef"
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+  	
+    # One of the main reasons you might create aa child class is a specific function that you only want this child to access
+    def cook(self, food):
+        return "Cooked " + food + "!" 
+Raza = Chef("Raza", 21)
+print(Raza.cook("Apple pie"))
+```
+
+### Modules
+
+A module is a file containing Python code. You can 'import' this code into *another* file and use it there. This is useful for maintaining organization and simplicity, and avoiding clutter. **Any** Python file (*.py) is a module. 
+
+To import a file as a module, you first need to have to .py files in the same directory:
+
+```python
+# Factorial.py
+def factorial(num):
+    """Returns the factorial of the number num"""
+    count = num # Assigns the value of num to count (e.g: 9)
+    while (count > 1): # So long as count is >0, the while loop runs (e.g: 9 times)
+        count -= 1 # Subtracts one from the count
+        num *= count # Multiplies num by count
+    return num
+```
+
+```python
+# Main.py
+print(factorial(9))
+```
+
+Of course, this is not enough. If you were to run Main.py, you'd get a NameError. You have to explicitly specify the name of the module to import:
+
+```python
+# Main.py
+import Factorial
+
+print(factorial(9))
+```
+
+But this still returns an error, for the reason shown below.
+
+#### Namespaces
+
+A namespace is the collection of names in a python file/module. It includes the names of variables, functions, classes, and whatever else can be named. Since names are what you use to access most data in Python, two classes (for example) having the same name would put up an error: how is the compiler supposed to know which one you're referring to?
+
+To avoid such contradictions, most imported modules have to be referenced in the format:
+
+```python
+modulename.functionname
+```
+
+If you wanted to access the factorial function, you would use:
+
+```python
+# Main.py
+
+import Factorial
+
+print(Factorial.factorial(9))
+```
+
+This works.
+
+#### Name Variation
+
+If you think `Factorial.factorial()` is too annoying to write, you could utilize:
+
+```python
+import Factorial as fac
+
+print(fac.factorial(9))
+```
+
+`import x as y` basically uses a different name, `y`, for the module `x`.
+
+Now, say you only wanted a certain portion of the module `Factorial`, and you didn't mind the `factorial` function name being occupied; you could use:
+
+```python
+from Factorial import factorial
+
+print(factorial(9))
+```
+
+#### Packages
+
+```mermaid
+graph TB
+    A((package/))-->B((module1.py))
+    A-->C((module2.py))
+    A-->D((__init__.py))
+    
+```
+
+The above diagram shows the file structure of a 'package'. A package is a folder that contains multiple python modules. Here, the `__init__.py` signifies that the directory is a package and can be left empty, while `module1.py` and `module2.py` are the modules you import when you import the package.
+
+To import the package, simply:
+
+```python
+# main.py
+
+import package
+```
+
