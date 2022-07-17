@@ -6,12 +6,12 @@ Notes on books and articles I've read, and videos I've watched. For better recol
 
 ### Table of Contents
 
-- ### [Articles](./Books/)
+- ### [Articles](../Books/)
 
-  - [Untools](./Articles/Untools.md)
+  - [Untools](../Articles/Untools.md)
 
-- ### [Books](./Books/)
+- ### [Books](../Books/)
 
-  - [Python Basics *by* David Amoz, et. al](./Books/PythonBasics.md)
-  - [The Richest Man in Babylon *by George S. Clason*](./Books/TheRichestManInBabylon.md)
-  - [Blood, Sweat, and Pixels by Jason Schreier](./Books/BloodSweatandPixels.md)
+  - [Python Basics *by* David Amoz, et. al](../Books/PythonBasics.md)
+  - [The Richest Man in Babylon *by George S. Clason*](../Books/TheRichestManInBabylon.md)
+  - [Blood, Sweat, and Pixels by Jason Schreier](../Books/BloodSweatandPixels.md)
