@@ -9,5 +9,5 @@ Notes on books and articles I've read, and videos I've watched. For better recol
 
 ### Table of Contents
 
-- ### [Articles](/reading-notes/Articles/Untools.md)
+- ### [Articles](./Articles/)
 - ### [Books](./Books/)
