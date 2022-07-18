@@ -26,13 +26,13 @@ aux_links:
 defaults:
   - 
     scope:
-      path: "Articles"
+      path: "./Articles"
     values:
       parent: Articles
       nav_exclude: true
   - 
     scope:
-      path: "Books"
+      path: "./Books"
     values:
       parent: Books
       nav_exclude: true
