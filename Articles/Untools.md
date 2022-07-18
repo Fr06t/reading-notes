@@ -1,4 +1,6 @@
-
+---
+parent: Articles
+---
 
 # [Untools: Tools for Better Thinking](https://untools.co/)
 
