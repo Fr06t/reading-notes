@@ -29,10 +29,10 @@ defaults:
       path: "Articles"
     values:
       parent: Articles
-      nav_exclude: true
+      nav_order: 2
   - 
     scope:
       path: "Books"
     values:
       parent: Books
-      nav_exclude: true
+      nav_order: 2
