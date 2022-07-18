@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Articles
 parent: null
 nav_order: 2

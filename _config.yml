@@ -24,13 +24,15 @@ aux_links:
     - "https://github.com/fr06t/reading-notes"
 
 defaults:
-  - scope:
-      path: "./Articles"
+  - 
+    scope:
+      path: "Articles"
     values:
       parent: Articles
       nav_exclude: true
-  - scope:
-      path: "./Books"
+  - 
+    scope:
+      path: "Books"
     values:
       parent: Books
       nav_exclude: true
