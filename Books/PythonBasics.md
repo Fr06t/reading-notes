@@ -647,21 +647,31 @@ print(factorial(9))
 
 #### Packages
 
-```mermaid
-graph TB
-    A((package/))-->B((module1.py))
-    A-->C((module2.py))
-    A-->D((__init__.py))
-    
+```tree
+package/ 
+ ├── __init__.py 
+ ├── module1.py 
+ └── module2.py
+ main.py
 ```
 
-The above diagram shows the file structure of a 'package'. A package is a folder that contains multiple python modules. Here, the `__init__.py` signifies that the directory is a package and can be left empty, while `module1.py` and `module2.py` are the modules you import when you import the package.
+The above tree shows the file structure of a 'package'. A package is a folder that contains multiple python modules. Here, the `__init__.py` signifies that the directory is a package and can be left empty, while `module1.py` and `module2.py` are the modules you import when you import the package.
 
 To import the package, simply:
 
 ```python
 # main.py
 
-import package
+import package 
 ```
+
+To import a specific `module.py` file:
+
+```python
+# main.py
+
+import package.module1
+```
+
+### File Input and Output
 
